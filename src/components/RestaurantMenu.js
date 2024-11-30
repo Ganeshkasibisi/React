@@ -1,9 +1,9 @@
-import Shimmer from './Shimmer';
+
 import {useParams} from 'react-router-dom';
 import {useState} from 'react';
-import {CDN_URL} from '../utils/constants'
 import useRestaurantMenu from '../utils/useRestaurantMenu'
 import RestaurantCategory from'./RestaurantCategory'
+import ShimmerMenu from './ShimmerMenu';
 
 
 const RestaurantMenu = () =>{
@@ -17,7 +17,7 @@ const RestaurantMenu = () =>{
  
 
 
-if (resInfo === null) return (<Shimmer/>);
+if (resInfo === null) return (<ShimmerMenu/>);
 
 
 const {deliveryTime} = resInfo?.cards[2]?.card?.card?.info?.sla;
